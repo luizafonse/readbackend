@@ -5,15 +5,15 @@ API desenvolvida com Nest.js que gerencia o processo eleitoral para escolha de r
 
 ### O sistema oferece:
 
--Apresentação de candidatos através de vitrine digital
+- Apresentação de candidatos através de vitrine digital
 
--Geração de QR codes únicos para cada candidato
+- Geração de QR codes únicos para cada candidato
 
--Integração segura com o sistema de votação
+- Integração segura com o sistema de votação
 
--Autenticação e autorização de eleitores
+- Autenticação e autorização de eleitores
 
--Dashboard administrativo para acompanhamento
+- Dashboard administrativo para acompanhamento
 
 ## Requisitos Técnicos
 
@@ -59,14 +59,18 @@ API desenvolvida com Nest.js que gerencia o processo eleitoral para escolha de r
 Instalação
 ```bash
 git clone https://github.com/laboratorio-de-praticas/vitrine-be.git
+
 cd vitrine-be
+
 npm install
+
 cp .env.example .env
 ```
 
 ## Variáveis de Ambiente (.env)
 
 ### Configurações do servidor
+```bash
 PORT=5001
 NODE_ENV=development
 
@@ -79,6 +83,8 @@ DB_DATABASE=vitrine
 
 ### Frontend 
 FRONT_END_HOST=http://localhost:3001
+```
+
 
 ## Scripts Disponíveis
 - `npm run build`: Compila o projeto usando o Nest
@@ -125,23 +131,41 @@ O frontend (vitrine-fe) consomeia com:
 
 ## Endpoints Principais
 ### Autenticação
-Método	Endpoint	Descrição
-POST	/auth/login	Login de administradores
-POST	/auth/refresh	Renovação de token
+Método POST
+→ Endpoint: /auth/login
+→ Descrição: Login de administradores
+
+Método POST
+→ Endpoint: /auth/refresh
+→ Descrição: Renovação de token
 
 
 ### Candidatos
-Método	Endpoint	Descrição	Autenticação
-GET	/candidates	Lista todos candidatos	Pública
-POST	/candidates	Cria novo candidato	Admin
-PATCH	/candidates/:id	Atualiza candidato	Admin
+Método GET
+→ Endpoint: /candidates
+→ Descrição: Lista todos candidatos
+→ Autenticação: Pública
 
+Método POST
+→ Endpoint: /candidates
+→ Descrição: Cria novo candidato
+→ Autenticação: Admin (JWT)
+
+Método PATCH
+→ Endpoint: /candidates/:id
+→ Descrição: Atualiza candidato específico
+→ Autenticação: Admin (JWT)
 
 ### QR Codes
-Método	Endpoint	Descrição
-POST	/qr-codes/generate	Gera QR code para candidato
-GET	/qr-codes/validate	Valida QR code para votação
+Método POST
+→ Endpoint: /qr-codes/generate
+→ Descrição: Gera QR code único para um candidato
+→ Autenticação: Admin (JWT)
 
+Método GET
+→ Endpoint: /qr-codes/validate/:code
+→ Descrição: Valida QR code para processo de votação
+→ Autenticação: Sistema de Votação (API Key)
 
 ## Segurança
 ### Camadas de Proteção
