@@ -1,19 +1,15 @@
 # Laboratório de Práticas: _Vitrine - Backend_
 
 ## Descrição
-API desenvolvida com Nest.js que gerencia o processo eleitoral para escolha de representantes de classe na Fatec. Através de QR codes únicos cada eleitor é encaminhado para a página de votação correspondente ao candidato escolhido, garantindo transparência e acessibilidade durante o processo eleitoral da Fatec. Integra o _Sistema de Votação para a Faculdade_.
+API desenvolvida com Nest.js que gerencia a apresentação de candidatos para representante e de Projetos da Fatec Registro. Através de QR codes únicos cada voto é encaminhado para a página correspondente ao candidato escolhido, garantindo transparência e acessibilidade durante o processo eleitoral da Faculdade.
 
 ### O sistema oferece:
 
-- Apresentação de candidatos através de vitrine digital
+- Apresentação de candidatos e projetos através de vitrine digital
 
 - Geração de QR codes únicos para cada candidato
 
 - Integração segura com o sistema de votação
-
-- Autenticação e autorização de eleitores
-
-- Dashboard administrativo para acompanhamento
 
 ## Requisitos Técnicos
 
@@ -49,8 +45,6 @@ API desenvolvida com Nest.js que gerencia o processo eleitoral para escolha de r
 
 - Criptografia de senhas com bcrypt
 
-- Proteção contra CSRF
-
 - Rate limiting para endpoints públicos
 
 - Validação de entrada de dados com class-validator
@@ -75,11 +69,11 @@ PORT=5001
 NODE_ENV=development
 
 ### Banco de dados
-DB_HOST=localhost
-DB_PORT=5432
-DB_USERNAME=postgres
-DB_PASSWORD=postgres
-DB_DATABASE=vitrine
+DB_HOST=nome_do_host
+DB_PORT=porta
+DB_USERNAME=nome_do-usuario
+DB_PASSWORD=senha
+DB_DATABASE=nome_do_banco
 
 ### Frontend 
 FRONT_END_HOST=http://localhost:3001
@@ -103,31 +97,17 @@ FRONT_END_HOST=http://localhost:3001
 ## Estrutura do Projeto 
 ```
 src/
-├── auth/               # Autenticação e autorização
-│   ├── strategies/     # Estratégias JWT
-│   └── guards/         # Guards de proteção
-├── candidates/         # Gestão de candidatos
-├── elections/          # Processos eleitorais
-├── qr-codes/           # Geração e validação de QR codes
-├── users/              # Gestão de usuários (admin/eleitores)
-├── shared/             # Recursos compartilhados
-│   ├── exceptions/     # Filtros de exceção
-│   ├── interceptors/   # Interceptores
-│   └── decorators/     # Decoradores customizados
-├── app.module.ts       # Módulo raiz
-└── main.ts             # Ponto de entrada
+├── controllers/     # Controladores da aplicação
+├── dto/             # Objetos de transferência de dados
+├── entities/        # Entidades do banco de dados
+├── modules/         # Módulos NestJS
+├── providers/       # Provedores de serviços
+├── middlewares/     # Middlewares personalizados
+├── repositories/    # Repositórios para acesso a dados
+├── services/        # Serviços de negócios
+├── utils/           # Funções utilitárias
+└── main.ts          # Ponto de entrada da aplicação
 ```
-
-## Integração Frontend
-O frontend (vitrine-fe) consomeia com:
-
-- Autenticação: Login via JWT
-
-- Listagem de Candidatos: GET /api/candidates
-
-- Geração de QR Codes: POST /api/qr-codes/generate
-
-- Validação de Votos: POST /api/votes/validate
 
 ## Endpoints Principais
 ### Autenticação
