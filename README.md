@@ -7,9 +7,13 @@ API desenvolvida com Nest.js que gerencia a apresentação de candidatos para re
 
 - Apresentação de candidatos e projetos através de vitrine digital
 
-- Geração de QR codes únicos para cada candidato
+- Geração de QR codes únicos para cada representate
 
 - Integração segura com o sistema de votação
+
+- Busca de eventos externos
+
+- Consumo de informações providos pelo CMS através do Banco de Dados
 
 ## Requisitos Técnicos
 
@@ -42,12 +46,6 @@ API desenvolvida com Nest.js que gerencia a apresentação de candidatos para re
 
 ## Segurança
 - Autenticação JWT (JSON Web Tokens)
-
-- Criptografia de senhas com bcrypt
-
-- Rate limiting para endpoints públicos
-
-- Validação de entrada de dados com class-validator
 
 ## Configuração do Ambiente
 Instalação
@@ -110,85 +108,23 @@ src/
 ```
 
 ## Endpoints Principais
-### Autenticação
-Método POST
-→ Endpoint: /auth/login
-→ Descrição: Login de administradores
 
-Método POST
-→ Endpoint: /auth/refresh
-→ Descrição: Renovação de token
-
-
-### Candidatos
+### Representantes
 Método GET
-→ Endpoint: /candidates
-→ Descrição: Lista todos candidatos
-→ Autenticação: Pública
-
-Método POST
-→ Endpoint: /candidates
-→ Descrição: Cria novo candidato
-→ Autenticação: Admin (JWT)
-
-Método PATCH
-→ Endpoint: /candidates/:id
-→ Descrição: Atualiza candidato específico
-→ Autenticação: Admin (JWT)
-
-### QR Codes
-Método POST
-→ Endpoint: /qr-codes/generate
-→ Descrição: Gera QR code único para um candidato
-→ Autenticação: Admin (JWT)
-
-Método GET
-→ Endpoint: /qr-codes/validate/:code
-→ Descrição: Valida QR code para processo de votação
-→ Autenticação: Sistema de Votação (API Key)
+→ Endpoint: /v1/vitrine/tv
+→ Descrição: Lista todos os eventos internos ativos no momento, com o número de representantes >=2
+→ Autenticação: Nível Administrativo
 
 ## Segurança
 ### Camadas de Proteção
-- Helmet: Headers de segurança HTTP
 
 - CORS: Restrito ao domínio do frontend
-
-- Rate Limiting: 100 requisições/minuto
-
-- Validators: DTOs com class-validator
-
 
 ## Testes
 - Cobertura garantida por:
 
 - Testes unitários (Jest)
 
-- Testes de integração
-
-- Testes E2E com Supertest
 ```bash
 npm run test:cov  # Gera relatório de cobertura
 ```
-
-## Licença
-MIT License
-
-Copyright (c) 2025 Projeto Vitrine
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
