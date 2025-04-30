@@ -31,7 +31,7 @@ API desenvolvida com Nest.js que gerencia a apresentação de candidatos para re
 
 - npm: v10.x ou Yarn
 
-- PostgreSQL: v16+ (banco de dados principal)
+- [![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-ea2845?style=flat-square&logo=postgresql&logoColor=white)]: v16+ (banco de dados principal)
 
 - [![Nest.js](https://img.shields.io/badge/-NestJs-ea2845?style=flat-square&logo=nestjs&logoColor=white)](https://nestjs.com/): v11.0.0
 
