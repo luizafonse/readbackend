@@ -29,13 +29,13 @@ API desenvolvida com Nest.js que gerencia a apresentação de candidatos para re
 ### Ambiente de Desenvolvimento
 - [![Node.js](https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white)](https://nodejs.org/pt): v22.x (LTS recomendado)
 
-- npm: v10.x ou Yarn
+- [![NPM](https://img.shields.io/badge/NPM-2D3136.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/): v10.x ou Yarn
 
-- [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)]: v16+ (banco de dados principal)
+- [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/): v16+ (banco de dados principal)
 
 - [![Nest.js](https://img.shields.io/badge/-NestJs-ea2845?style=flat-square&logo=nestjs&logoColor=white)](https://nestjs.com/): v11.0.0
 
-- [![Typescript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/): v5.7.3
+- [![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/): v5.7.3
 
 ## Dependências Principais
 
