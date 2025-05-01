@@ -149,6 +149,9 @@ npm run test:cov  # Gera relatório de cobertura
 
 ## 📖 Diagramação - Vitrine 
 
+>[!NOTE]
+> Organograma Documentado de todas as Requisições e Redirecionamentos da Sessão de Vitrine.
+
 ```mermaid
 flowchart TD
     A(["Vitrine Front-end"]) --> B{{Acessar eventos internos ou externos}}
