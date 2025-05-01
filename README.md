@@ -53,10 +53,8 @@ API desenvolvida com Nest.js que gerencia a apresentação de candidatos para re
 
 - @nestjs/swagger: v11.1.0 (documentação API)
 
-## Segurança
-- [![Autenticação JWT](https://img.shields.io/badge/JWT-black?style=plastic&logo=JSON%20web%20tokens)](https://jwt.io/): (JSON Web Tokens)
 
-## Configuração do Ambiente
+## 🏠 Configuração do Ambiente
 Instalação
 ```bash
 git clone https://github.com/laboratorio-de-praticas/vitrine-be.git
@@ -68,7 +66,7 @@ npm install
 cp .env.example .env
 ```
 
-## Variáveis de Ambiente (.env)
+## 🔀 Variáveis de Ambiente (.env)
 
 ### Configurações do servidor
 ```bash
@@ -87,7 +85,7 @@ FRONT_END_HOST=http://localhost:3001
 ```
 
 
-## Scripts Disponíveis
+## 📋 Scripts Disponíveis
 - `npm run build`: Compila o projeto usando o Nest
 - `npm run format`: Formata o código usando Prettier
 - `npm run start`: Inicia o servidor em modo normal
@@ -101,7 +99,7 @@ FRONT_END_HOST=http://localhost:3001
 - `npm run test:debug`: Executa os testes em modo de depuração
 - `npm run test:e2e`: Executa os testes end-to-end
 
-## Estrutura do Projeto 
+## 🗂️ Estrutura do Projeto 
 ```
 src/
 ├── controllers/     # Controladores da aplicação
@@ -124,7 +122,9 @@ Método GET
 → Descrição: Lista todos os eventos internos ativos no momento, com o número de representantes >=2
 → Autenticação: Nível Administrativo
 
-## Segurança
+## 🔒 Segurança
+- [![Autenticação JWT](https://img.shields.io/badge/JWT-black?style=plastic&logo=JSON%20web%20tokens)](https://jwt.io/): (JSON Web Tokens)
+
 ### Camadas de Proteção
 
 - CORS: Restrito ao domínio do frontend
@@ -139,7 +139,7 @@ npm run test:cov  # Gera relatório de cobertura
 ```
 
 
-## Diagramação - Vitrine 
+## 📖 Diagramação - Vitrine 
 
 ```mermaid
 flowchart TD
