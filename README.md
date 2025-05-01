@@ -54,7 +54,7 @@ API desenvolvida com Nest.js que gerencia a apresentação de candidatos para re
 - @nestjs/swagger: v11.1.0 (documentação API)
 
 ## Segurança
-- [![Autenticação JWT] (https://img.shields.io/badge/JWT-black?style=plastic&logo=JSON%20web%20tokens)(https://jwt.io/)](JSON Web Tokens)
+- [![Autenticação JWT](https://img.shields.io/badge/JWT-black?style=plastic&logo=JSON%20web%20tokens)(https://jwt.io/)](JSON Web Tokens)
 
 ## Configuração do Ambiente
 Instalação
