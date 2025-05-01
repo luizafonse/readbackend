@@ -55,6 +55,10 @@ API desenvolvida com Nest.js que gerencia a apresentação de candidatos para re
 
 
 ## 🏠 Configuração do Ambiente
+
+> [!IMPORTANT]
+> Previamente a iniciação do projeto, é preciso realizar algumas configurações.
+
 Instalação
 ```bash
 git clone https://github.com/laboratorio-de-praticas/vitrine-be.git
@@ -69,6 +73,10 @@ cp .env.example .env
 ## 🔀 Variáveis de Ambiente (.env)
 
 ### Configurações do servidor
+
+>[!NOTE]
+> Necessário verificar se na raiz do projeto um arquivo .env (ponto + env) está presente e com as seguintes chaves:
+
 ```bash
 PORT=5001
 NODE_ENV=development
